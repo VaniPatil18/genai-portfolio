@@ -138,32 +138,26 @@ The forward process is a Markov process that gradually adds Gaussian noise to tr
 Purpose
 The forward process simulates a noise corruption trajectory, which the model learns to reverse during training. It provides a structured way to model complex data distributions through gradual degradation.
 
+![diffusion_model](diffusion_model_1.png)
+
+
+
 Key Advantages
 Stable Training
-
 Optimized with a simple loss (e.g., noise prediction), avoiding adversarial instability.
-
 Theoretical Soundness
-
 Based on probabilistic principles with a tractable and interpretable likelihood.
-
 High-Quality Samples
-
 Enables generation of photorealistic, diverse outputs across modalities.
-
 No Mode Collapse
-
 Captures full data diversity, unlike GANs.
-
 Versatility
-
 Adaptable to tasks like inpainting, super-resolution, and conditional generation.
 
-
+![diffusion_model](diffusionimage.png)
 
 **Output Example:**  
-![Diffusion Output](Screenshot 2025-06-02 204913.png)
-![Diffusion Output](Screenshot 2025-06-02 204959.png)
+![Diffusion Output](noise2.png)
 
 🔗 [Open my Google Colab notebook](https://colab.research.google.com/drive/1An-eHvPoHJNW9nqR2YodlKB-I3Z56toD#scrollTo=YDNH6xsx0tZr)
 
