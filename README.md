@@ -37,6 +37,8 @@ Architecture :
    Loss Function: Mean Squared Error (MSE)
 5. Optimizer: Adam
 
+![Autoencoder Output](autoencoder.jpeg)
+
 Functional Flow :
 1 . Input: Grayscale fashion image (e.g., handbag) is provided as input to the encoder.
 2 . Encoding: The encoder compresses the input from 784 to 32 dimensions, capturing key visual features.
