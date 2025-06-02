@@ -65,18 +65,21 @@ Key Benefits and Applications  :
 
 <details>
 <summary>🔹 <strong>VAE (Variational Auto-Encoders)</strong></summary>
+A Variational Autoencoder (VAE) is a type of neural network that not only compresses data like a regular autoencoder but also learns a probabilistic latent space, allowing it to generate new data that looks like the training data (e.g., new handwritten digits).
 
-GANs consist of two networks — a **Generator** and a **Discriminator** — that compete in a zero-sum game to improve image generation.
+Architecture :
+1. Encoder: Converts the input (e.g., an image) into a compressed representation, but instead of a single point, it outputs a distribution (mean and variance).
+2. Latent Sampling: Samples a point from this distribution using a special trick to allow training.
+3. Decoder: Reconstructs the input from this sampled point.
+4. Loss Function: Encourages the reconstruction to be accurate and the latent space to be well-structured.
 
-**Use Cases:**
-- Image synthesis
-- Super-resolution
-- Deepfake generation
+![vae_bd](https://github.com/user-attachments/assets/a4b2c347-1fb0-4822-a96c-6718deb5d3b6)
+
 
 **Output Example:**  
-![GAN Output](./gan/images/output.png)
+![vae_op](https://github.com/user-attachments/assets/5ff71441-0162-4f35-80d0-4602ca1a56b2)
 
-🔗 [View GAN Project](./gan/README.md)
+🔗 [Open my Google Colab notebook](https://colab.research.google.com/drive/1vYlGMwf08j50uokxhn2C31NA5_RWlNM1
 
 </details>
 
