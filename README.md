@@ -162,9 +162,10 @@ Adaptable to tasks like inpainting, super-resolution, and conditional generation
 
 
 **Output Example:**  
-![Diffusion Output](./diffusion/images/sample_output.png)
+![Diffusion Output](Screenshot 2025-06-02 204913.png)
+![Diffusion Output](Screenshot 2025-06-02 204959.png)
 
-🔗 [View Diffusion Model Project](./diffusion/README.md)
+🔗 [Open my Google Colab notebook](https://colab.research.google.com/drive/1An-eHvPoHJNW9nqR2YodlKB-I3Z56toD#scrollTo=YDNH6xsx0tZr)
 
 </details>
 
