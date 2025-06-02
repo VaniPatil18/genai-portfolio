@@ -64,7 +64,7 @@ Key Benefits and Applications  :
 ---
 
 <details>
-<summary>🔹 <strong>GANs (Generative Adversarial Networks)</strong></summary>
+<summary>🔹 <strong>VAE (Variational Auto-Encoders)</strong></summary>
 
 GANs consist of two networks — a **Generator** and a **Discriminator** — that compete in a zero-sum game to improve image generation.
 
