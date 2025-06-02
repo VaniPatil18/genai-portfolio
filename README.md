@@ -131,6 +131,8 @@ Diffusion models are known for their stability, high-quality outputs, and flexib
 
 The forward process is a Markov process that gradually adds Gaussian noise to training data over a series of TT timesteps, transforming structured data into pure noise.
 
+![diffusion_model](diffusion model.jpeg)
+
 
 
 Purpose
