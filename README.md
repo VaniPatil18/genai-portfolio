@@ -54,9 +54,10 @@ Key Benefits and Applications  :
 
 
 **Output Example:**  
-![Autoencoder Output](./autoencoder/images/reconstruction_sample.png)
+![Autoencoder Output](autoencoder_output.png)
 
-🔗 [View Autoencoder Project](./autoencoder/README.md)
+🔗 [Open my Google Colab notebook](https://colab.research.google.com/drive/1VctKToXz5HnEq3hgnZk5fyVwTOx2_AJ8)
+
 
 </details>
 
