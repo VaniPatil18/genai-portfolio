@@ -79,7 +79,7 @@ Architecture :
 **Output Example:**  
 ![vae_op](https://github.com/user-attachments/assets/5ff71441-0162-4f35-80d0-4602ca1a56b2)
 
-🔗 [Open my Google Colab notebook](https://colab.research.google.com/drive/1vYlGMwf08j50uokxhn2C31NA5_RWlNM1
+🔗 [Open my Google Colab notebook](https://colab.research.google.com/drive/1vYlGMwf08j50uokxhn2C31NA5_RWlNM1)
 
 </details>
 
@@ -88,17 +88,43 @@ Architecture :
 <details>
 <summary>🔹 <strong>CycleGAN</strong></summary>
 
-CycleGAN enables image-to-image translation **without paired data**.
+CycleGAN is a type of GAN (Generative Adversarial Network) designed for image-to-image translation without paired data. It can learn to translate an image from one domain (e.g., horses) to another (e.g., zebras) and vice versa, without needing exact image pairs for training.
 
-**Use Cases:**
-- Photo ↔ Painting
-- Horse ↔ Zebra
-- Summer ↔ Winter
+Architecture :
+1. Start (Input Image) :
+The model begins with an image from Domain A (e.g., a horse).
+
+2. Generator A→B :
+Transforms the horse image into an image that looks like it belongs to Domain B (e.g., a zebra). This is the Generated Image.
+
+3. Discriminator B :
+Receives both real zebra images (from actual data) and generated zebra images.
+Tries to distinguish between real and fake.
+Outputs True (real) or False (fake).
+
+4. Cycle Consistency :
+The generated zebra image is fed into another generator B→A, which tries to reconstruct the original horse image.
+This ensures that translations are meaningful and reversible.
+
+5. Discriminator A :
+Similarly, it distinguishes between real horse images and generated ones.
+
+![cycleganbd](https://github.com/user-attachments/assets/792f6b11-2548-4b00-a094-fd55fd1a8d15)
+
+Advantages of CycleGAN :
+1. Unpaired Data: No need for aligned image pairs (huge benefit for real-world data).
+2. Bi-directional Translation: Learns both domain transformations (e.g., horse ↔ zebra).
+3. Preserves Structure: Maintains content while changing style or domain.
+4. Wide Applications:
+
+    Style transfer (e.g., photo → painting)
+    Object transfiguration (e.g., horse ↔ zebra)
+    Medical image translation
+    Season or weather change in images
 
 **Output Example:**  
-![CycleGAN Output](./cyclegan/images/output.png)
-
-🔗 [View CycleGAN Project](./cyclegan/README.md)
+![cycleganop](https://github.com/user-attachments/assets/a39f4e68-8ad5-4584-9903-75e765699c2e)
+🔗 [Open my Google Colab notebook](https://colab.research.google.com/gist/sgshrigouri/a86b0ab07c0f0d6b2eb2718406355864/cyclegan.ipynb)
 
 </details>
 
@@ -171,18 +197,37 @@ Adaptable to tasks like inpainting, super-resolution, and conditional generation
 <details>
 <summary>🔹 <strong>ViT (Vision Transformer)</strong></summary>
 
-ViT splits an image into patches and applies transformer encoders on them — treating image patches like tokens in NLP.
+A Vision Transformer (ViT) is a deep learning model that applies the transformer architecture, originally designed for NLP, to image data. Instead of using convolutional layers like CNNs, ViT treats images as sequences of patches, just like words in a sentence.
 
-**Use Cases:**
-- Image classification
-- Object detection
-- Medical image analysis
+Architecture of Vision Transformer (ViT) :
+1. Image Preprocessing
+    Input image (e.g., 224×224×3) is split into fixed-size patches (e.g., 16×16).
+    Each patch is flattened and linearly embedded into a vector (e.g., 768-d).
+    A [CLS] token (like in BERT) is prepended for classification.
+    Positional Encodings are added to retain spatial information.
+![vit1](https://github.com/user-attachments/assets/7f7056fe-69ac-4e7e-9279-259724ee4bff)
+2. Transformer Encoder Blocks :
+  Each block consists of:
+   Layer Normalization
+   Multi-Head Self-Attention (as shown in your image)
+   Feed Forward Network (FFN)
+   Residual Connections
 
+3. Classification Head :
+Output corresponding to the [CLS] token is passed through a linear layer for final prediction.
+
+![vit2](https://github.com/user-attachments/assets/bdc1a545-1425-4343-b8f3-2b13fc5c2812)
+
+Advantages of Vision Transformers Over CNNs :
+1. Global Understanding: ViTs capture long-range dependencies from the start using self-attention, unlike CNNs which focus locally in early layers.
+2. Scalable Efficiency: They scale better with data and model size, often outperforming CNNs when pretrained on large datasets.
+3. Interpretability: Attention maps make ViTs more transparent, clearly showing which image regions influence predictions.
+4. Architectural Flexibility: ViTs adapt easily to diverse tasks without needing specialized design changes.
+5. Unified Modeling: Their compatibility with NLP makes ViTs ideal for multimodal models (e.g., image + text).
 **Output Example:**  
-![ViT Output](./vit/images/output.png)
+![vitop](https://github.com/user-attachments/assets/bd57440d-381e-4cf5-94b9-fba757761fb5)
 
-🔗 [View ViT Project](./vit/README.md)
-
+🔗  [Open my Google Colab notebook](https://colab.research.google.com/drive/19KwE1jz9rPKfb_3Li0TnzCyNFg6Co_mR#scrollTo=_gUMk1N4W78C)
 </details>
 
 ---
