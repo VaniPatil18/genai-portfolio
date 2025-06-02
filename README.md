@@ -22,12 +22,34 @@ Generative AI models learn a **probability distribution** over the training data
 <details>
 <summary>🔹 <strong>Autoencoders</strong></summary>
 
-Autoencoders are neural networks that compress input data into a latent space (encoding) and reconstruct it (decoding).
+Designed and implemented a fully connected autoencoder neural network for unsupervised feature learning, with a focus on image compression and reconstruction. The model was trained on the Fashion MNIST dataset, enabling it to learn compact, lower-dimensional representations of grayscale fashion images. These compressed representations were then used to accurately reconstruct the original inputs, demonstrating the model’s ability to retain essential visual features while reducing dimensionality.
 
-**Use Cases:**
-- Data compression
-- Image denoising
-- Anomaly detection
+Architecture :
+1. Input Dimension: 784 (28×28 grayscale image flattened)
+2. Encoder:
+    Dense Layer 1: 512 neurons with ReLU activation
+    Dense Layer 2: 32 neurons (bottleneck layer)
+3. Latent Space:
+    32-dimensional compressed representation capturing the essential features of the input image .
+4. Decoder:
+   Dense Layer 1: 512 neurons with ReLU activation
+   Output Layer: 784 neurons with Sigmoid activation (reshaped to 28×28)
+   Loss Function: Mean Squared Error (MSE)
+5. Optimizer: Adam
+
+Functional Flow :
+1 . Input: Grayscale fashion image (e.g., handbag) is provided as input to the encoder.
+2 . Encoding: The encoder compresses the input from 784 to 32 dimensions, capturing key visual features.
+3 .  Decoding: The decoder reconstructs the original image from this compressed representation.
+4 . Output: A reconstructed version of the original image is generated, maintaining visual similarity while discarding redundant information.
+
+Key Benefits and Applications  :
+1. Dimensionality Reduction: Compresses high-dimensional input images into a compact latent space.
+2. Feature Learning: Learns meaningful, low-dimensional representations without supervision.
+3. Denoising Capability: Robust against noise, enabling cleaner reconstructions.
+4. Efficient Storage & Transmission: Reduced data size makes it suitable for memory-constrained systems.
+5. Foundation for Generative Models: Can be extended into advanced models such as Variational Autoencoders (VAEs).
+
 
 **Output Example:**  
 ![Autoencoder Output](./autoencoder/images/reconstruction_sample.png)
