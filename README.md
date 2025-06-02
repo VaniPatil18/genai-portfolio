@@ -123,12 +123,41 @@ cGANs are conditioned on input variables like class labels to generate class-spe
 <details>
 <summary>🔹 <strong>Diffusion Models</strong></summary>
 
-Diffusion models learn to reverse a noise process to generate highly detailed images. Used in models like **Stable Diffusion** and **Imagen**.
+A diffusion model is a generative model that learns to create data by reversing a gradual noising process.
+During training, it adds noise to data over many steps (forward process) to learn the degradation pattern.
+In generation, it starts from random noise and denoises it step-by-step to produce realistic samples.
+Diffusion models are known for their stability, high-quality outputs, and flexibility across data types.
 
-**Use Cases:**
-- Text-to-image generation
-- Inpainting
-- AI-generated artwork
+
+The forward process is a Markov process that gradually adds Gaussian noise to training data over a series of TT timesteps, transforming structured data into pure noise.
+
+
+
+Purpose
+The forward process simulates a noise corruption trajectory, which the model learns to reverse during training. It provides a structured way to model complex data distributions through gradual degradation.
+
+Key Advantages
+Stable Training
+
+Optimized with a simple loss (e.g., noise prediction), avoiding adversarial instability.
+
+Theoretical Soundness
+
+Based on probabilistic principles with a tractable and interpretable likelihood.
+
+High-Quality Samples
+
+Enables generation of photorealistic, diverse outputs across modalities.
+
+No Mode Collapse
+
+Captures full data diversity, unlike GANs.
+
+Versatility
+
+Adaptable to tasks like inpainting, super-resolution, and conditional generation.
+
+
 
 **Output Example:**  
 ![Diffusion Output](./diffusion/images/sample_output.png)
